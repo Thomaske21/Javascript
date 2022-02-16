@@ -1,8 +1,9 @@
 const setup = () => {
     window.alert("Dit is een mededeling");
-    window.confirm("Weet u het zeker");
-    window.prompt("Wat is uw naam","onbekend");
-
+    const confirm = window.confirm("Weet u het zeker");
+    const prompt = window.prompt("Wat is uw naam","onbekend");
+console.log(confirm);
+console.log(prompt);
 
 
 }

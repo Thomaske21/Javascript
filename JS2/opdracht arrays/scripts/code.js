@@ -1,5 +1,5 @@
 const setup = () => {
-    const familieNamen = ['Frank','Axelle','Alex','Nick','Evelyne','Regine'];
+    const familieNamen = ['Frank','Axelle','Alex','Nick','Evelyne','Regine','Jenny'];
     console.log(familieNamen.length);
     console.log(familieNamen[0],familieNamen[2],familieNamen[4]);
     function voegNaamToe(){

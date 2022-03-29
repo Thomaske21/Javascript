@@ -1,7 +1,51 @@
 const setup = () => {
-    let var1 = 'iets';
-    let var2 = 'iets anders';
-
+    let string1 = "Dit is iets";
+    let string2 ="Dit is iets";
+    let string3 ="Dit"
+    let string4 ="Dit is"
+    if(string1==string2){
+        console.log(true);
+    }
+    else{
+        console.log(false);
+    }
+    if(string1===string2){
+        console.log(true)
+    }
+    else{
+        console.log(false)
+    }
+    if(string3 == string1.substring(0,4)){
+        console.log(string1.substring(0,4))
+        console.log(true);
+    }
+    else{
+        console.log(false)
+    }
+    if(string3 == string1.substring(0,3)){
+        console.log(true);
+    }
+    else{
+        console.log(false)
+    }
+    if(string3 === string1.substring(0,3)){
+        console.log(true);
+    }
+    else{
+        console.log(false)
+    }
+    if(string4+"iet" == string1.slice((-1))){
+        console.log(true)
+    }
+    else{
+        console.log(false)
+    }
+    if(string4+"iet" === string1.slice((-1))){
+        console.log(true)
+    }
+    else{
+        console.log(false)
+    }
 
 }
 window.addEventListener("load", setup);

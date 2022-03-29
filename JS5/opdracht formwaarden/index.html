@@ -7,8 +7,38 @@
     <title>Opdracht formwaarden</title>
 </head>
 <body>
+<form>
+    <label for="roker">Is roker</label>
+    <input type="checkbox" id="roker" name="roker">
+    <br>
+    <span>Moedertaal &emsp;</span>
+    <label for="Nl">Nederlands</label>
+    <input type="radio" id="Nl" name="Moedertaal" value="nl">
+    <label for="Fr">Frans</label>
+    <input type="radio" id="Fr" name="Moedertaal" value="fr">
+    <label for="En">Engels</label>
+    <input type="radio" id="En" name="Moedertaal" value="en">
+    <br>
+    <label for="buurland">Favoriete buurland</label>
+    <select name="buurland" id="buurland">
+        <option value="Nederland">Nederland</option>
+        <option value="Frankrijk">Frankrijk</option>
+        <option value="Duitsland">Duitsland</option>
+    </select>
+    <br>
+    <label for="bestelling">Bestelling</label>
+    <select multiple name="bestelling" id="bestelling">
+        <option value="aardappelen">aardappelen</option>
+        <option value="brood">brood</option>
+        <option value="melk">melk</option>
+        <option value="biefstuk">biefstuk</option>
+        <option value="chips">chips</option>
+        <option value="krant">krant</option>
+    </select>
+    <br>
 
-
+</form>
+<button id="button">Toon resultaat</button>
 
 <script type="text/javascript" charset="utf-8"
         src="scripts/code.js"></script>

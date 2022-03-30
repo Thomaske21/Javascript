@@ -10,6 +10,12 @@ const valideer = () => {
 	valideerGeboorteDatum();
 	valideerEmail();
 	valideerKinderen();
+	if (valideerVoornaam() && valideerFamilienaam() && valideerGeboorteDatum() && valideerEmail() && valideerKinderen()){
+		juist = true;
+	}
+	if(juist) {
+		window.alert("Proficiat");
+	}
 };
 
 const valideerVoornaam = () => {
@@ -79,10 +85,13 @@ const valideerKinderen = () => {
 	let kinderen = txtKinderen.value.trim();
 	if (!isGetal(kinderen) || kinderen < 0 ){
 		reportError(txtKinderen,"is geen positief getal");
+		return false;
 	} else if (kinderen > 99){
 		reportError(txtKinderen,"is te vruchtbaar");
+		return false;
 	} else {
 		clearError(txtKinderen);
+		return true;
 	}
 }
 

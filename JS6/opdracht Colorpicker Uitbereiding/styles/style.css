@@ -1,0 +1,34 @@
+body {
+    margin: 20px;
+}
+section {
+    border: solid grey 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+    padding: 0;
+    width: 500px;
+}
+
+.sliders {
+    margin-right: 0;
+    float: left;
+    margin-left: 10px;
+}
+.colorDemo {
+    float: left;
+    border: solid black 1px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0,0,0);
+}
+#save {
+    float: right;
+    margin-top: 110px;
+}
+#saved .delet {
+    float: right;
+}
+

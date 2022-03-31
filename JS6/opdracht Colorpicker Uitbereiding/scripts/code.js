@@ -1,5 +1,4 @@
 const setup = () => {
-    let colorDemos = document.getElementsByClassName("colorDemo");
     let sliders = document.getElementsByClassName("slider");
     let button = document.getElementById("save");
 
@@ -12,7 +11,7 @@ const setup = () => {
 
 }
 const update = () => {
-    let colorDemos = document.getElementsByClassName("colorDemo");
+    let colorDemos = document.getElementById("kleur");
     let sliderRed = document.getElementById("red");
     let sliderGreen = document.getElementById("green");
     let sliderBlue = document.getElementById("blue");
@@ -22,11 +21,11 @@ const update = () => {
     let valueRed = sliderRed.value;
     let valueGreen = sliderGreen.value;
     let valueBlue = sliderBlue.value;
-    let color = 'rgb(' + valueRed + ',' + valueGreen + ',' + valueBlue + ')';
+    let color = 'rgb(' + valueRed + ', ' + valueGreen + ', ' + valueBlue + ')';
     RedNumber.innerHTML = valueRed;
     GreenNumber.innerHTML = valueGreen;
     BlueNumber.innerHTML = valueBlue;
-    colorDemos[0].style.backgroundColor = color;
+    colorDemos.style.backgroundColor = color;
 
 }
 const save = () => {
@@ -38,7 +37,7 @@ const save = () => {
     verwijder.className = "delet";
     let x = document.createTextNode("x");
     verwijder.append(x);
-    verwijder.addEventListener("click",delet)
+    verwijder.addEventListener("click",delet);
     let valueRed = document.getElementById("red").value;
     let valueGreen = document.getElementById("green").value;
     let valueBlue = document.getElementById("blue").value;
@@ -53,19 +52,23 @@ const delet = (event) => {
     let button = event.target;
     let div = button.parentElement;
     section.removeChild(div);
+    event.stopPropagation();
 }
 
 const load = (event) => {
-    let kleur = document.getElementsByClassName("colorDemo")[0];
     let div = event.target;
     let kleurcode = div.getAttribute("style");
-    let rgbvalue =kleurcode.substring(22,35).split(", ");
-    console.log(rgbvalue);
+    let rgbvalue =kleurcode.split("(")[1].split(")")[0].split(", ");
     let rValue = rgbvalue[0];
     let gValue = rgbvalue[1];
     let bValue = rgbvalue[2];
-    kleur.style.backgroundColor = 'rgb(' + rValue +',' + gValue+',' + bValue + ')';
-    console.log(kleurcode);
+    let rSlider = document.getElementById("red");
+    rSlider.value = rValue;
+    let gSlider = document.getElementById("green");
+    gSlider.value = gValue;
+    let bSlider = document.getElementById("blue");
+    bSlider.value = bValue;
+    update();
 }
 
 window.addEventListener("load", setup);

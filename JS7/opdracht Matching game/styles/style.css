@@ -1,0 +1,49 @@
+#speelveld{
+    margin-top:0px;
+    background-color: grey;
+    width:1150px;
+}
+.kaart{
+    background-color: white;
+    border: solid 1px black;
+    width: 24%;
+    height: 200px;
+    display: inline-block;
+    margin:4px;
+}
+.kaart >div> img{
+    max-height: 90%;
+    max-width: 90%;
+    display: flex;
+    margin: auto;
+
+}
+
+.achterkant{
+    margin-top:-190px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.voorkant{
+    max-width: 220px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.deKaart{
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+.voorkant{
+    backface-visibility:hidden ;
+}
+.achterkant{
+    backface-visibility:hidden;
+    transform: rotateY(180deg);
+}
+
+.flipCard{
+    transform:rotateY(180deg);
+}
+.gevonden{
+    visibility: hidden;
+}

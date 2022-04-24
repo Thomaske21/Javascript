@@ -4,11 +4,11 @@ let global = {
     IMAGE_PATH_PREFIX: "images/",
     IMAGE_PATH_SUFFIX: ".png",
 
-    MOVE_DELAY: 3000,
+    MOVE_DELAY: 500,
 
     score: 0,
     timeoutid: 0
-};
+}
 
 const setup = () => {
     let button = document.getElementById("start");

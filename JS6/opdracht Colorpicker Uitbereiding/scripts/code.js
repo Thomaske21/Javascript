@@ -1,3 +1,4 @@
+
 const setup = () => {
     let sliders = document.getElementsByClassName("slider");
     let button = document.getElementById("save");

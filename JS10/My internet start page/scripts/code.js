@@ -49,8 +49,16 @@ const search = () => {
 const createcard = (website,text,url) => {
     let history = document.getElementById("history");
     let card = document.createElement("div");
-    card.classList.add("card");
     card.classList.add("col-4");
+    if (website == "Youtube"){
+        card.classList.add("yt");
+    } else if (website == "Google"){
+        card.classList.add("go");
+    } else if (website == "Twitter"){
+        card.classList.add("tw");
+    } else if (website =="Instagram"){
+        card.classList.add("ig");
+    }
     let cardbody = document.createElement("div");
     cardbody.classList.add("card-body");
     let title = document.createElement("h5");
